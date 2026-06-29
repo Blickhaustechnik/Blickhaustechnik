@@ -3,18 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blickhaustechnik - SHK Fachbetrieb</title>
+<title>Blickhaustechnik - Nazir Golami | SHK & Hausmeister</title>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 <style>
-/* --- متغیرهای رنگی برای طراحی حرفه‌ای --- */
 :root {
-    --primary-color: #0A4D8C; /* آبی تیره اصلی */
-    --accent-color: #FFD43B; /* زرد آفتابی */
+    --primary-color: #0A4D8C; 
+    --accent-color: #FFD43B; 
     --text-dark: #333;
     --text-light: #fff;
-    --bg-light: #f9f9f9;
+    --bg-light: #f4f7f9;
 }
 
 * {
@@ -24,43 +23,43 @@
 }
 
 body {
-    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     color: var(--text-dark);
     line-height: 1.6;
     scroll-behavior: smooth;
 }
 
-/* --- منوی بالایی حرفه‌ای (شیشه‌ای) --- */
+/* منوی شیشه‌ای بالا */
 nav {
-    background: rgba(10, 77, 140, 0.95);
-    backdrop-filter: blur(5px);
+    background: rgba(10, 77, 140, 0.98);
     position: fixed;
     top: 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 5%;
+    padding: 10px 5%;
     z-index: 1000;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
 
-nav .logo-container {
+.logo-container {
     display: flex;
     align-items: center;
+    text-decoration: none;
 }
 
-/* --- استایل لوگو --- */
-nav .logo-image {
-    max-height: 50px; /* اندازه لوگو */
+.logo-image {
+    max-height: 65px; 
+    width: auto;
     margin-right: 15px;
 }
 
-nav .logo-text {
+.logo-text {
     color: var(--text-light);
     font-weight: 700;
-    font-size: 26px;
-    letter-spacing: 1px;
+    font-size: 22px;
+    text-transform: uppercase;
 }
 
 nav ul {
@@ -69,308 +68,280 @@ nav ul {
 }
 
 nav ul li {
-    margin-left: 25px;
+    margin-left: 20px;
 }
 
 nav ul li a {
     color: var(--text-light);
     text-decoration: none;
-    font-size: 16px;
     font-weight: 500;
-    transition: color 0.3s;
+    transition: 0.3s;
 }
 
 nav ul li a:hover {
     color: var(--accent-color);
 }
 
-/* --- هدر اصلی با عکس پس‌زمینه --- */
+/* هدر با تصویر ابزار فنی (به جای عکس خانم) */
 header {
-    background: linear-gradient(rgba(10, 77, 140, 0.8), rgba(10, 77, 140, 0.9)), 
-                url('https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2070&auto=format&fit=crop'); /* عکس پس‌زمینه باکیفیت مرتبط با SHK */
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(10, 77, 140, 0.7)), 
+                url('https://images.unsplash.com/photo-1581094288338-2314dddb7bc3?q=80&w=2070&auto=format&fit=crop'); 
     background-size: cover;
     background-position: center;
     color: var(--text-light);
-    padding: 180px 10% 120px 10%;
+    padding: 160px 10% 100px 10%;
     text-align: center;
 }
 
 header h1 {
-    font-size: 64px;
-    font-weight: 800;
-    margin-bottom: 20px;
-    letter-spacing: -1px;
+    font-size: 55px;
+    margin-bottom: 10px;
 }
 
 header p {
-    font-size: 28px;
-    margin-bottom: 40px;
+    font-size: 24px;
+    margin-bottom: 30px;
     font-weight: 300;
 }
 
 .button {
     display: inline-block;
-    padding: 20px 45px;
+    padding: 18px 40px;
     background: var(--accent-color);
-    color: var(--text-dark);
+    color: #000;
     text-decoration: none;
-    border-radius: 50px; /* دکمه گرد شده */
-    font-weight: 700;
-    font-size: 20px;
-    transition: all 0.3s;
-    box-shadow: 0 5px 15px rgba(255, 212, 59, 0.4);
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.3s;
 }
 
 .button:hover {
-    background: #e0b825;
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(255, 212, 59, 0.5);
+    background: #fcc200;
+    transform: scale(1.05);
 }
 
-/* --- بخش‌های عمومی --- */
 section {
-    padding: 100px 10%;
+    padding: 80px 10%;
 }
 
 h2 {
     color: var(--primary-color);
-    font-size: 42px;
+    font-size: 36px;
     text-align: center;
-    margin-bottom: 50px;
-    font-weight: 700;
+    margin-bottom: 40px;
+    position: relative;
 }
 
-/* --- بخش درباره من --- */
-#ueber-uns {
+h2::after {
+    content: '';
+    width: 60px;
+    height: 4px;
+    background: var(--accent-color);
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* بخش Hausmeisterstätigkeit */
+.activities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.activity-card {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-top: 5px solid var(--primary-color);
+    transition: 0.3s;
+}
+
+.activity-card:hover {
+    transform: translateY(-5px);
+}
+
+.activity-card i {
+    font-size: 40px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.activity-card h3 {
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+/* بخش درباره من (توضیحات SHK) */
+#ueber-mich {
     background: var(--bg-light);
 }
 
-.about-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
-    align-items: center;
+.about-box {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
 }
 
 .about-text {
     font-size: 18px;
-    color: #444;
+    line-height: 1.8;
 }
 
 .about-text p {
     margin-bottom: 20px;
 }
 
-.about-text strong {
-    color: var(--primary-color);
-}
-
-.about-image {
-    max-width: 100%;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-}
-
-/* --- بخش تماس با فرم حرفه‌ای --- */
-#kontakt {
-    background: #fff;
-}
-
+/* بخش تماس */
 .contact-container {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
-    gap: 60px;
+    gap: 50px;
 }
 
-/* اطلاعات تماس */
 .contact-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    background: var(--primary-color);
+    color: white;
+    padding: 40px;
+    border-radius: 12px;
 }
 
-.contact-info h3 {
-    color: var(--primary-color);
-    margin-bottom: 20px;
-    font-size: 24px;
-}
+.contact-info h3 { margin-bottom: 25px; }
 
-.contact-info ul {
-    list-style: none;
-}
-
-.contact-info li {
-    margin-bottom: 25px;
+.contact-item {
     display: flex;
     align-items: center;
+    margin-bottom: 20px;
 }
 
-.contact-info i {
-    font-size: 30px;
+.contact-item i {
+    font-size: 24px;
+    margin-right: 15px;
     color: var(--accent-color);
-    background: rgba(255, 212, 59, 0.1);
-    padding: 15px;
-    border-radius: 10px;
-    margin-right: 20px;
 }
 
-.contact-info span {
-    font-size: 18px;
-    font-weight: 500;
-}
+.contact-item a { color: white; text-decoration: none; }
 
-.contact-info a {
-    color: var(--primary-color);
-    text-decoration: none;
-}
-
-/* فرم تماس جدید و شیک */
 .contact-form {
     background: #fff;
-    padding: 50px;
-    border-radius: 20px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.05);
-}
-
-.contact-form .input-group {
-    margin-bottom: 25px;
+    padding: 20px;
 }
 
 .contact-form input, .contact-form textarea {
     width: 100%;
-    padding: 18px;
-    border: 1px solid #eee;
-    border-radius: 10px;
-    font-family: inherit;
-    font-size: 16px;
-    transition: 0.3s;
-}
-
-.contact-form input:focus, .contact-form textarea:focus {
-    border-color: var(--accent-color);
-    box-shadow: 0 0 10px rgba(255, 212, 59, 0.2);
-    outline: none;
-}
-
-.contact-form textarea {
-    height: 160px;
-    resize: vertical;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
 .contact-form button {
     background: var(--primary-color);
-    color: var(--text-light);
+    color: white;
     border: none;
-    padding: 20px 40px;
+    padding: 15px 30px;
     font-size: 18px;
-    border-radius: 50px;
     cursor: pointer;
-    font-weight: 700;
     width: 100%;
-    transition: 0.3s;
-    box-shadow: 0 5px 15px rgba(10, 77, 140, 0.3);
+    border-radius: 5px;
+    font-weight: bold;
 }
 
-.contact-form button:hover {
-    background: #073460;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(10, 77, 140, 0.4);
-}
-
-/* --- فوتر --- */
 footer {
-    background: var(--primary-color);
-    color: var(--text-light);
+    background: #222;
+    color: white;
     text-align: center;
-    padding: 40px 10%;
-    font-size: 16px;
+    padding: 30px;
 }
 
-footer p {
-    margin-bottom: 10px;
-}
-
-/* --- واکنش‌گرایی موبایل --- */
-@media (max-width: 992px) {
-    header h1 { font-size: 48px; }
-    .about-content, .contact-container { grid-template-columns: 1fr; }
-    nav ul { display: none; } /* پنهان کردن منو در موبایل */
+@media (max-width: 768px) {
+    header h1 { font-size: 38px; }
+    .contact-container { grid-template-columns: 1fr; }
+    nav ul { display: none; }
 }
 </style>
-
 </head>
-
 <body>
 
 <nav>
-    <div class="logo-container">
+    <a href="#home" class="logo-container">
+        <img src="logo.png" alt="Blickhaustechnik Logo" class="logo-image">
         <div class="logo-text">Blickhaustechnik</div>
-    </div>
+    </a>
     <ul>
-        <li><a href="#home">Startseite</a></li>
-        <li><a href="#ueber-uns">Über mich</a></li>
+        <li><a href="#home">Start</a></li>
+        <li><a href="#hausmeister">Tätigkeiten</a></li>
+        <li><a href="#ueber-mich">Über mich</a></li>
         <li><a href="#kontakt">Kontakt</a></li>
     </ul>
 </nav>
 
 <header id="home">
     <h1>Blickhaustechnik</h1>
-    <p>Sanitär - Heizung - Klima Fachbetrieb</p>
-    <a class="button" href="tel:+491629667577">
-        <i class="fas fa-phone-alt" style="margin-right: 10px;"></i> Jetzt anrufen
-    </a>
+    <p>Handwerkliche Dienstleistungen & SHK-Service in Achim & Bremen</p>
+    <a class="button" href="tel:+491629667577"><i class="fas fa-phone-alt"></i> Jetzt anrufen</a>
 </header>
 
-<section id="ueber-uns">
-    <h2>Über mich</h2>
-    <div class="about-content">
-        <div class="about-text">
-            <p>Mein Name ist <strong>Nazir Golami</strong>. Als erfahrener SHK-Fachmann (Sanitär, Heizung, Klima) bin ich Ihr zuverlässiger Partner in Achim, Bremen und Umgebung.</p>
-            <p>Ganz gleich, ob es um die Badsanierung, die Optimierung Ihrer Heizungsanlage, Klimatechnik oder akute Reparatur- und Installationsarbeiten geht – ich stehe Ihnen mit fachmännischem Rat und handwerklichem Können zur Seite.</p>
-            <p>Sauberkeit, Zuverlässigkeit und eine präzise Arbeitsweise haben für mich oberste Priorität. Gerne berate ich Sie individuell vor Ort, um die beste Lösung für Ihr Anliegen zu finden. Nehmen Sie einfach unverbindlich Kontakt mit mir auf – ich freue mich auf Ihre Anfrage!</p>
+<section id="hausmeister">
+    <h2>Hausmeisterstätigkeit</h2>
+    <div class="activities-grid">
+        <div class="activity-card">
+            <i class="fas fa-tools"></i>
+            <h3>Reparaturen</h3>
+            <p>Instandsetzung und kleine Reparaturen im und am Haus, sowie Montagearbeiten.</p>
         </div>
-        <div>
-            <img src="https://images.unsplash.com/photo-1542385151-efd9000785a0?q=80&w=1000&auto=format&fit=crop" alt="SHK Expertise" class="about-image">
+        <div class="activity-card">
+            <i class="fas fa-faucet"></i>
+            <h3>Sanitär-Check</h3>
+            <p>Überprüfung von Armaturen, Rohrreinigungen und Behebung von Undichtigkeiten.</p>
+        </div>
+        <div class="activity-card">
+            <i class="fas fa-thermometer-half"></i>
+            <h3>Heizungsbetreuung</h3>
+            <p>Unterstützung bei der Wartung und Entlüftung von Heizkörpern.</p>
+        </div>
+    </div>
+</section>
+
+<section id="ueber-mich">
+    <h2>Über mich</h2>
+    <div class="about-box">
+        <div class="about-text">
+            <p>Mein Name ist <strong>Nazir Golami</strong>. Als erfahrener Fachmann im Bereich <strong>SHK (Sanitär, Heizung, Klima)</strong> bringe ich umfassendes technisches Wissen in meine tägliche Arbeit ein.</p>
+            <p>Mein Arbeitsalltag umfasst die präzise Installation und Reparatur von Sanitäranlagen, die Wartung moderner Heizsysteme sowie den schnellen Notdienst bei Rohrbrüchen oder Störungen. Ich kümmere mich gewissenhaft um den Werterhalt Ihrer Immobilien durch fachmännische Hausmeistertätigkeiten.</p>
+            <p>Zuverlässigkeit, Sauberkeit und eine lösungsorientierte Arbeitsweise in Achim, Bremen und Umgebung sind für mich selbstverständlich. Ich freue mich darauf, Ihnen bei Ihren technischen Anliegen behilflich zu sein.</p>
         </div>
     </div>
 </section>
 
 <section id="kontakt">
-    <h2>Kontaktieren Sie mich</h2>
+    <h2>Kontakt</h2>
     <div class="contact-container">
-        
         <div class="contact-info">
-            <h3>Ich bin direkt erreichbar</h3>
-            <ul>
-                <li>
-                    <i class="fas fa-phone-alt"></i>
-                    <div>
-                        <strong>Mobil:</strong><br>
-                        <a href="tel:+491629667577">+49 162 9667577</a>
-                    </div>
-                </li>
-                <li>
-                    <i class="fas fa-map-marker-alt"></i>
-                    <div>
-                        <strong>Adresse:</strong><br>
-                        Bremer Straße 1,<br>
-                        28832 Achim
-                    </div>
-                </li>
-            </ul>
+            <h3>Nazir Golami</h3>
+            <div class="contact-item">
+                <i class="fas fa-phone-alt"></i>
+                <a href="tel:+491629667577">+49 162 9667577</a>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <span>blickhaustechnik@outlook.de</span>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Bremer Straße 1, 28832 Achim</span>
+            </div>
         </div>
-        
+
         <div class="contact-form">
             <form action="mailto:blickhaustechnik@outlook.de" method="POST" enctype="text/plain">
-                <div class="input-group">
-                    <input type="text" name="Name" placeholder="Ihr Name" required>
-                </div>
-                <div class="input-group">
-                    <input type="email" name="E-Mail" placeholder="Ihre E-Mail-Adresse" required>
-                </div>
-                <div class="input-group">
-                    <textarea name="Nachricht" placeholder="Ihre Nachricht..." required></textarea>
-                </div>
+                <input type="text" name="Name" placeholder="Ihr Name" required>
+                <input type="email" name="E-Mail" placeholder="Ihre E-Mail" required>
+                <textarea name="Nachricht" placeholder="Wie kann ich Ihnen helfen?" rows="5" required></textarea>
                 <button type="submit">Nachricht senden</button>
             </form>
         </div>
@@ -378,8 +349,8 @@ footer p {
 </section>
 
 <footer>
-    <p>© 2026 Blickhaustechnik - Sanitär, Heizung, Klima.</p>
-    <p>Bremer Straße 1, 28832 Achim</p>
+    <p>&copy; 2026 Blickhaustechnik - Nazir Golami. Alle Rechte vorbehalten.</p>
+    <p style="font-size: 12px; margin-top: 10px; opacity: 0.7;">Kleingewerbe gemäß § 19 UStG</p>
 </footer>
 
 </body>
